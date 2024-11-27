@@ -1,0 +1,68 @@
+.navigation__label {
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+
+  height: 4rem;
+  width: 4rem;
+  background-color: red;
+  border-radius: 50%;
+
+  z-index: 2000;
+}
+
+.navigation__checkox {
+  display: none;
+}
+
+.navigation__background {
+  height: 3rem;
+  width: 3rem;
+  background-color: #eab308;
+  border-radius: 50%;
+
+  position: fixed;
+  top: 4.5rem;
+  right: 4.5rem;
+
+  transform: scale(1);
+  transition: all 0.9s;
+
+  z-index: 1000;
+}
+
+.navigation__checkox:checked ~ .navigation__background {
+  transform: scale(80);
+}
+
+.navigation__comp {
+  z-index: 1500;
+  /* background-color: green; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* width: 100%; */
+  width: 0%;
+  opacity: 0;
+  height: 100vh;
+
+  transition: all 0.5s;
+}
+
+.navigation__checkox:checked ~ .navigation__comp {
+  width: 100%;
+  opacity: 1;
+}
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  list-style: none;
+}
+
+.navigation__item {
+  font-size: 2.4rem;
+}
